@@ -5,6 +5,7 @@ return {
       require "custom.plugins.lspconfig"
     end,
   },
+
   ["williamboman/mason.nvim"] = {
     override_options = {
       ensure_installed = {
@@ -31,10 +32,13 @@ return {
       },
     },
   },
+
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
       require "custom.plugins.null-ls"
     end,
   },
+  
+  ["tpope/vim-fugitive"] = {},
 }
