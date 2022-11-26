@@ -1,4 +1,5 @@
 return {
+  -- LSP
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
@@ -6,6 +7,7 @@ return {
     end,
   },
 
+  -- Manager for installing linters and diagnosers
   ["williamboman/mason.nvim"] = {
     override_options = {
       ensure_installed = {
@@ -32,11 +34,12 @@ return {
 
         -- markdown
         "marksman",
-        "markdownlint"
+        "markdownlint",
       },
     },
   },
 
+  -- Linting and diagnosing
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
@@ -44,22 +47,34 @@ return {
     end,
   },
 
+  -- Git integration
   ["tpope/vim-fugitive"] = {},
 
-  ["lewis6991/gitsigns.nvim"] = {},
-
-  ["folke/trouble.nvim"] = {
-    requires = "kyazdani42/nvim-web-devicons",
+  -- Breadcrumbs for bar
+  ["SmiteshP/nvim-navic"] = {
+    module = "nvim-navic",
     config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
+      require "custom.plugins.nvim-navic"
     end,
   },
 
-  ["SmiteshP/nvim-navic"] = {
-    requires = "neovim/nvim-lspconfig",
+  -- Customize status line
+  ["NvChad/ui"] = {
+    override_options = {
+      statusline = {
+        separator_style = "round",
+        overriden_modules = function()
+          return require "custom.plugins.statusline"
+        end,
+      },
+    },
+  },
+
+  -- Report of errors and warnings
+  ["folke/trouble.nvim"] = {
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {}
+    end,
   },
 }
