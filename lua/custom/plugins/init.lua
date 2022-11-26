@@ -29,6 +29,10 @@ return {
 
         -- bash
         "bash-language-server",
+
+        -- markdown
+        "marksman",
+        "markdownlint"
       },
     },
   },

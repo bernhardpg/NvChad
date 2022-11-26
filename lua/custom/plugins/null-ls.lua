@@ -18,6 +18,9 @@ local sources = {
   -- Shell
   b.formatting.shfmt.with { filetypes = {"sh", "zsh"} },
   b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+
+  -- Markdown
+  b.formatting.markdownlint,
 }
 
 null_ls.setup {
