@@ -11,6 +11,7 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- Make bashls also detect zsh files
 lspconfig["bashls"].setup {
   on_attach = on_attach,
   capabilities = capabilities,
