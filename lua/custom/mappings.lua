@@ -24,7 +24,7 @@ M.nvterm = {
     -- toggle in normal mode
     ["<C-i>"] = {
       function()
-        require("nvterm.terminal").toggle "float"
+        require("nvterm.terminal").toggle "vertical"
       end,
       "toggle floating term",
     },
@@ -34,7 +34,7 @@ M.nvterm = {
     -- toggle in terminal mode
     ["<C-i>"] = {
       function()
-        require("nvterm.terminal").toggle "float"
+        require("nvterm.terminal").toggle "vertical"
       end,
       "toggle floating term",
     },
