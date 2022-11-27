@@ -10,7 +10,7 @@ local on_attach = function(client, bufnr)
 end
 
 local lspconfig = require "lspconfig"
-local servers = { "pyright", "vimls", "sumneko_lua", "bashls", "marksman" }
+local servers = { "pyright", "vimls", "sumneko_lua", "bashls", "marksman", "julials" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

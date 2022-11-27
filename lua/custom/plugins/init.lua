@@ -22,6 +22,9 @@ return {
         "flake8",
         "autoflake",
 
+        -- Julia
+        "julia-lsp",
+
         -- vim
         "vim-language-server",
 
