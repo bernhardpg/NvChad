@@ -11,13 +11,14 @@ local function nvim_navic()
 end
 
 return {
-  LSP_progress = function()
-    return nvim_navic()
-  end,
-  LSP_Diagnostics = function()
-    return ""
-  end,
-  LSP_status = function()
-    return ""
-  end,
+  -- TODO Uncomment this to add navic to statusline
+  -- LSP_progress = function()
+  --   return st_modules.LSP_progress() .. nvim_navic()
+  -- end,
+  -- LSP_Diagnostics = function()
+  --   return ""
+  -- end,
+  -- LSP_status = function()
+  --   return ""
+  -- end,
 }
