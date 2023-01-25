@@ -22,7 +22,7 @@ M.nvterm = {
   plugin = true,
   n = {
     -- toggle in normal mode
-    ["<C-i>"] = {
+    ["<C-k>"] = {
       function()
         require("nvterm.terminal").toggle "vertical"
       end,
@@ -32,7 +32,7 @@ M.nvterm = {
 
   t = {
     -- toggle in terminal mode
-    ["<C-i>"] = {
+    ["<C-k>"] = {
       function()
         require("nvterm.terminal").toggle "vertical"
       end,
