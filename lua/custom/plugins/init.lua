@@ -80,4 +80,12 @@ return {
       require("trouble").setup {}
     end,
   },
+
+  -- TODO manager
+  ["folke/todo-comments.nvim"] = {
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("todo-comments").setup {}
+    end,
+  },
 }
