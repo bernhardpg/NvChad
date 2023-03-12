@@ -88,4 +88,10 @@ return {
       require("todo-comments").setup {}
     end,
   },
+
+  -- Maktaba (required for bazel vim)
+  ["google/vim-maktaba"] = {},
+
+  -- Bazel vim integration
+  ["bazelbuild/vim-bazel"] = {},
 }
